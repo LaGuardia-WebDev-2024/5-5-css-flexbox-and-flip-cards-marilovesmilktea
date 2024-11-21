@@ -7,15 +7,97 @@ Comment Out Code Command + /
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=DM+Serif+Display:ital@0;1&family=Kablammo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
     <style>
- 
+      h1 {
+        font-family: "DM Serif Display", serif;
+        color: #F0A8D0;
+      }
+
+      .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #F4DADA;
+  color: #FF90BC;
+  transform: rotateY(180deg);
+}
+  
+      .main {
+        background-color: #E6A4B4;
+        display: flex;
+        justify-content: space-around;
+      }
     </style>
   </head>
   <body>
-    <h1>Jungle Animals</h1>
-
+    <center><h1>Jungle Animals</h1></center>
+    
+    <div class="main">
+  
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=21c6576693&attid=0.1&permmsgid=msg-a:r4200783853693924670&th=1934fb68c4fc68ad&view=fimg&fur=ip&permmsgid=msg-a:r4200783853693924670&sz=s0-l75-ft&attbid=ANGjdJ8mNYGFnTvwHd8a31Ze3jVTMTkvo_Lhw96_ZZnx8mfk-z9M9ghizT3Zisqqf8or6D8OlYVDxZr0qdIBn-FJL8jVhdwpIHHpTy8-HDSH7Gh6IslPI1Oda1VMutc&disp=emb&realattid=1934fb66c0333caf4ef1&zw" alt="cheetah" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>cheetah!</h1> 
+      <p>look at his lil' face ♡</p> 
+      <p>this cutie can run up to 50-80 mph!</p>
+    </div>
+  </div>
+</div>
+    
+    
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=21c6576693&attid=0.2&permmsgid=msg-a:r4200783853693924670&th=1934fb68c4fc68ad&view=fimg&fur=ip&permmsgid=msg-a:r4200783853693924670&sz=s0-l75-ft&attbid=ANGjdJ9ClGfgGDb740nIUA5ZMIow0ubuBeMSYTeATjrIyhbmu_HmNXgQ6v_4FfrdCqIwzgCNQdjLulP7YTFHe9NaRPFNUSf2ap6OKUYp-lxVT-y2GyzclZF-7BBFlwY&disp=emb&realattid=1934fb67dd113c963f22&zw" alt="sloth" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>sloth!!</h1> 
+      <p>she's so stylish, posing and everythingg</p> 
+      <p>this baby is very slow compared to a cheetah, and can sleep all day!</p>
+    </div>
+  </div>
+</div>
+      
+    </div>
    
   </body>
 </html>
